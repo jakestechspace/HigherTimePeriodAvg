@@ -1,0 +1,18 @@
+# This study will allow you to add a moving average from a higher time period
+# For example: you can look at the daily average on the 10 minute chart
+
+# define inputs
+input Price = FundamentalType.CLOSE;
+input Length = 21;
+input Displace = 0;
+input AverageType = AverageType.EXPONENTIAL;
+input Period = aggregationPeriod.DAY;
+
+# factor in displace value
+def DisplacedLength = Length + Displace;
+
+# create plot
+plot ExpAvg = MovingAverage(averageType, Fundamental(price, period = Period), DisplacedLength);
+
+# set default plot options
+ExpAvg.SetDefaultColor(CreateColor(0, 255, 231));

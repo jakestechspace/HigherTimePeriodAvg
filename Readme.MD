@@ -11,4 +11,4 @@ This script allows for adding higher time period averages to your chart.  For ex
 
 Can be customized through the inputs and options screen (gear icon in ToS edit studies page)
 
-Note: Time period must be greater than the time period you are currently in.
+**Note: Time period must be greater than the time period that your chart is currently set to.**
